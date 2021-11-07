@@ -132,6 +132,9 @@ class ManageEc2(Regions):           #Class to manage EC2 instances
             self.set_region(region)
             b = self.get_boto_client()
             b.stop_instances(InstanceIds=instance,DryRun=False)
+            print("EC2 instance in {} region with {} InstanceID stopped.".format(region,instance))
+
+        
 
     def start_instances(self, instance_ids):
         """ 
@@ -147,6 +150,7 @@ class ManageEc2(Regions):           #Class to manage EC2 instances
             self.set_region(region)
             b = self.get_boto_client()
             b.start_instances(InstanceIds=instance,DryRun=False)
+            print("EC2 instance in {} region with {} InstanceID started.".format(region,instance))
 
     
 
