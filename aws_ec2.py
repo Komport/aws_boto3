@@ -10,7 +10,7 @@ logger = logging.getLogger()
 class ManageEc2(Regions):           #Class to manage EC2 instances
 
     def __init__(self):             #Initialize super class
-        super().__init__() 
+        super().__init__(service='ec2') 
 
     def get_instances(self):
         """ 
