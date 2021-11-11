@@ -16,4 +16,4 @@ class ManageS3(Regions):           #Class to manage S3 Buckets
     def get_buckets(self):
         bc = self.get_boto_client()
         response = bc.list_buckets()
-        return response
+        return response['Buckets']
